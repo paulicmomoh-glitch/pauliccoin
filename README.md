@@ -2,6 +2,25 @@
 
 A comprehensive fungible token implementation on the Stacks blockchain using Clarity smart contracts.
 
+## PaulicBit (PBIT) — Clarinet contract added
+
+A simple fungible token contract has been added under `contracts/paulicbit.clar` and registered in `Clarinet.toml` as `[contracts.paulicbit]`.
+
+Quickstart:
+
+```bash
+clarinet check
+clarinet console
+```
+
+In the Clarinet console REPL:
+
+```clarity
+(contract-call? .paulicbit initialize)
+(contract-call? .paulicbit mint 'ST3J2GVMMM2R07ZFBJDWTYEYAR8FZH5WKDTFJ9AHA u1000)
+(contract-call? .paulicbit transfer 'ST3J2GVMMM2R07ZFBJDWTYEYAR8FZH5WKDTFJ9AHA u250)
+(contract-call? .paulicbit get-balance 'ST3J2GVMMM2R07ZFBJDWTYEYAR8FZH5WKDTFJ9AHA)
+```
 ## 📋 Overview
 
 PaulicCoin (PLIC) is a fully-featured fungible token that implements standard token functionality including transfers, allowances, minting, and burning. Built with Clarity and designed for the Stacks ecosystem, it provides a robust foundation for DeFi applications and token-based projects.
